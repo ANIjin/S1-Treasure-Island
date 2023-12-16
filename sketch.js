@@ -1,4 +1,4 @@
-var splashscreen
+var splashscreen,backgroundImg
 var gameState="wait"
 var playButton,aboutButton
 
@@ -6,6 +6,9 @@ var playButton,aboutButton
 
 function  preload() {
 splashscreen= loadImage("assets/splash.gif")    
+backgroundImg = loadImage("assets/background.png")
+
+
 }
 
 function setup(){
@@ -29,14 +32,13 @@ if(gameState=="wait"){
 }
 
 playButton.mousePressed(()=>{
-    background("red")
+    background(backgroundImg)
     gameState="play"
     playButton.hide()
     aboutButton.hide()
 })
 aboutButton.mousePressed(()=>{
-    background("blue")
-  about()
+    about()
     playButton.hide()
     aboutButton.hide()
 })
