@@ -33,3 +33,9 @@ label {
 	color: #555;
 	display: block;
 }
+text {
+	justify-content: "center";
+	align-items: "center";
+	margin-left: 10;
+
+}
